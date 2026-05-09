@@ -5,12 +5,7 @@ body {
   font-family: Arial, sans-serif;
 }
 
-header,
-footer,
-.Aside1,
-.Aside2,
-.article,
-.column {
+header,footer,.Aside1,.Aside2,.article,.column {
   padding: 20px;
   text-align: center;
   font-weight: bold;
