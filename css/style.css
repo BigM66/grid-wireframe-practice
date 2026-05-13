@@ -1,11 +1,14 @@
 
+
+
 body {
   background: #d9d9d9;
   padding: 20px;
   font-family: Arial, sans-serif;
+  height: auto;
 }
 
-header,footer,.Aside1,.Aside2,.article,.column {
+header,footer,.Aside1,.Aside2,.article1,.col {
   padding: 20px;
   text-align: center;
   font-weight: bold;
@@ -18,20 +21,52 @@ header { background: #ff6b81; }
 .Aside1 { background: #3498db; } 
 .Aside2 { background: turquoise; } 
 .article { background: #2ecc71; }     
-.column { background: #e74c3c; }         
-footer { background: #f39c12; }       
+.col { background: #e74c3c; }         
+footer { background: #f39c12; }    
+
+
 
 
 .main {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
-}
-
-.article {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 15px;
+  
 }
 
 
+
+
+@media (min-width: 700px) {
+
+  .main {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; 
+    gap: 20px;
+    
+  }
+
+  
+  .article {
+    grid-column: 2;
+  }
+
+
+  .column {
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 15px;
+  }
+
+  
+  .Aside1 {
+    grid-column: 1;
+    grid-row: 1 / span 2; 
+  }
+
+  .Aside2 {
+    grid-column: 3;
+    grid-row: 1 / span 2; 
+  }
+}
